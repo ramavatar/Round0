@@ -1,0 +1,122 @@
+<html>
+<head>
+  <title>login</title>
+  <style>
+ * {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-size: 120%;
+  background:#B0C4DE;;
+}
+
+.header {
+  width: 35%;
+  margin: 50px auto 0px;
+  color: white;
+  background:#755bea;
+  text-align: center;
+  border: 1px solid #B0C4DE;
+  border-bottom: none;
+  border-radius: 25px 24px 0px 0px;
+  padding: 20px;
+}
+form,.content {
+  width: 35%;
+  margin: 0px auto;
+  padding: 20px;
+  border: 1px solid #B0C4DE;
+  background: white;
+  border-radius: 0px 0px 10px 10px;
+}
+.input-group {
+  margin: 10px 0px 10px 0px;
+}
+.input-group label {
+  display: block;
+  text-align: left;
+  margin: 3px;
+}
+.input-group input {
+  height: 30px;
+  width: 93%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius:20px;
+  border: 1px solid gray;
+}
+.btn {
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  background:#0162c8; 
+  border: none;
+  border-radius:20px;
+  height: 40px;
+  margin:10px;
+  width:88%;
+}
+.btn:hover{
+    background:#3399ff;
+    font-size:20px; 
+}
+.alert{
+  color:#3399ff;
+  font-size:25px;
+}
+.success{
+  color:#4CAF50;
+  font-size: 25px;
+}
+</style>
+</head>
+<body>
+  <div class="header">
+    <h2>LOGIN</h2>
+  </div>
+     <script type="text/javascript">
+     function validation(){
+       var user=document.getElementById('username').value;
+       var pass=document.getElementById('password').value;
+       if(user=='ram' && pass=='fgiet'){ 
+        confirm("Login Successfully !  UserName- :  "   + user +"  Password-  : "   +  pass);
+       }
+       else if(user=='ram' && pass=='fgiet'){ 
+        confirm("Login Successfully !  UserName- :  "   + user +"  Password-  : "   +  pass);
+       }
+       else if(user=='ram' && pass=='fgiet'){ 
+        confirm("Login Successfully !  UserName- :  "   + user +"  Password-  : "   +  pass);
+       }
+       else if(user=='ram' && pass=='fgiet'){ 
+        confirm("Login Successfully !  UserName- :  "   + user +"  Password-  : "   +  pass);
+       }
+       else if(user=='ram' && pass=='fgiet'){ 
+        confirm("Login Successfully !  UserName- :  "   + user +"  Password-  : "   +  pass);
+       }
+       else if(user=='' && pass==''){ 
+        document.getElementById("fg").innerHTML='<div class="alert"><strong>Failed!</strong></div>';
+       }
+       else{
+      alert(" Failed  Wrong  UserName- :  "   + user +"   Or   Password-  : "   +  pass);
+       }
+     }
+     </script>
+  <form method="post">
+    <p id="fg"> </p>
+    <div class="input-group">
+        <label>Username</label>
+        <input type="text" id="username" required>
+    </div>
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="password" required>
+    </div>
+    <div class="input-group">
+        <button type="submit" class="btn" onclick="validation()">SUBMIT</button>
+    </div>
+  </form>
+</body>
+</html>
+
+<!--document.write(" <b style='font-size:30px; color:red; margin:10% 2% 0% 25%;'> login Successfully<br></b>" +"<strong style='font-size:30px; color:green; margin:10% 0% 0% 25%;'>UserName :  " + user +"</strong>" + "<br><strong style='font-size:30px; color:green; margin:10% 0% 0% 25%;'>Password :  " + pass +"</strong>");
