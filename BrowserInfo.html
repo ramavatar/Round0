@@ -9,10 +9,10 @@
 		text-align: center;
 		color:#f0f0f0;
 		font-family: 'Baloo Bhai', cursive;
-		margin-top: 50px;
+		margin-top:10px;
 	}
-	li{
-		font-size: 25px;
+	ol li{
+		font-size: 23px;
 		margin: 20px 20px;
 		background:#755bea;
 	}
@@ -22,19 +22,127 @@
 		background: #3399ff;  
 		padding: 20px;
 	}
+	
+	ul li{
+		font-size: 23px;
+		margin: 10px 10px;
+		background:#755bea;
+	}
+	ul{
+		list-style-type:upper-roman;
+		list-style-type:square;
+		background: #3399ff;  
+		padding:20px;
+	}
+	ul:before{
+		background: none;
+	}
 	b{
 		color:#0162c8;
 		font-size: 30px;
+		margin-right: 10px;
 	}
 	strong{
-		color:#fff; 
+		color:#fff;
+		margin-left: 50px; 
 	}
+	select{
+		padding:10px; 
+		font-size:25px;
+	}
+
+	table{
+		margin-top:40px; 
+		margin-left: 34%;
+	}
+	select{
+		border-radius: 20px;
+		color:voilet;
+		text-align:center;
+		padding-left:auto;
+	}
+	#btm{
+    padding: 6px 10px;
+    border: 2px solid white;
+    background-color:tomato;
+    color:#fff;
+    height: 50px;
+    width: 120px;
+    font-size: 2.0rem;
+    border-radius: 15px;
+    cursor:pointer;
+    margin-left: 50px;
+}
+
+#btm:hover{
+     color: black;
+     background-color:slateblue;
+     color: #fff;
+}
+.btn {
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  background:#0162c8; 
+  border: none;
+  border-radius:20px;
+  height: 40px;
+  margin-left:20%;
+  width:60%;
+}
+.btn:hover{
+    background:#3399ff;
+    font-size:20px; 
+}
+
 	</style>
 	</head>
 <body>
+	<table>
+		<tr>
+		<th>	
+<select id="info" required >
+<option>Select any Function</option>
+<option>code name</option>
+<option>App name</option>
+<option>app version</option>
+<option>user agent</option>
+<option>Language </option>
+<option>platform</option>
+</select>
+</th>
+<th>
+<input type="button" id="btm" value="Submit" onclick="browser()" >
+</th> </tr>
+</table>
 	<h1> BROWSER INFO </h1>
-<ol>
+<ul id="ram">
 <script language="Java Script" type="text/javascript">
+function browser(){
+var info=document.getElementById('info').value;
+if(info=="code name"){
+ document.getElementById('ram').innerHTML="<li><b>code name:</b>"+navigator.appCodeName+"</li>";
+}
+if(info=="App name"){
+	document.getElementById('ram').innerHTML="<li><b>App name:</b>"+navigator.appName+"</li>";
+}
+if(info=="app version"){
+	document.getElementById('ram').innerHTML="<li><b>App version:</b>"+navigator.appVersion+"</li>";
+}
+if(info=="user  agent"){
+	document.getElementById('ram').innerHTML="<li><b>user  agent:</b>"+navigator.userAgent+"</li>";
+}
+if(info=="Language"){
+	document.getElementById('ram').innerHTML="<li><b>Language:</b>"+navigator.language+"</li>";
+}
+if(info=="platform"){
+	document.getElementById('ram').innerHTML="<li><b>platform :</b>"+navigator.platform+"</li>";
+}
+}
+</script>
+</ul>
+<ol>
+<script type="text/javascript">	
 document.write("<li> <b>code name:</b> <strong>"+ navigator.appCodeName + "</strong></li>");
 document.write("<li> <b> App name: </b> <strong>" +navigator.appName  + "</strong></li>");
 document.write("<li> <b> app version: </b> <strong> " +navigator.appVersion + "</strong></li>");
@@ -43,5 +151,6 @@ document.write("<li> <b> Language : </b> <strong>" +navigator.language  + "</str
 document.write("<li> <b> platform : </b> <strong> " +navigator.platform  + "</strong></li>");
 </script>
 </ol>
+<button class="btn" onclick="window.print()">Print this page</button>
 </body>
 </html>
